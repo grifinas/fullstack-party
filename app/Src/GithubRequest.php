@@ -23,9 +23,7 @@ class GithubRequest extends ProviderRequest
 
         $this->access_token = $access_token;
 
-        parent::__construct([
-            'http_errors' => false
-        ]);
+        parent::__construct();
     }
 
 

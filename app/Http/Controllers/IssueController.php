@@ -29,8 +29,6 @@ class IssueController extends Controller
     {
         $issue = $this->getProvider()->getIssue($user, $name, $number);
 
-        dump($issue);
-
         return view('issue', [
             'issue' => $issue
         ]);
