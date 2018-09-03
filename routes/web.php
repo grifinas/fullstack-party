@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/login', 'LoginController@getIndex');
+Route::get('/callback', 'LoginController@getSuccess');
+Route::get('/logout', 'LoginController@getLogout');
+
+Route::middleware(['access'])->group(function () {
+    Route::get('/', 'IssueController@getIndex');
+    Route::get('/issues/{user}/{name}/{number}', [
+        'as' => 'issue',
+        'uses' => 'IssueController@getIssue'
+    ]);
 });

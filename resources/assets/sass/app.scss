@@ -5,10 +5,80 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
-
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body {
+  background-color: rgb(216, 216, 216);
+}
+
+.issue {
+  margin-bottom: 15px;
+  background-color: white;
+  min-height: 60px;
+  display: block;
+  cursor: pointer;
+
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+
+  .status, .comments {
+    width: 10%;
+    float: left;
+    display: inline-block;
+  }
+
+  .main {
+    width: 80%;
+    float: left;
+
+    .info {
+      color: gray;
+
+      .id, .time, .opener {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.issue-comments {
+  margin-top: 25px;
+  .comment {
+    background-color: white;
+    min-height: 50px;
+    margin-bottom: 15px;
+
+
+    .user{
+      display: inline-block;
+      width: 10%;
+      float: left;
+    }
+
+    .body {
+      display: inline-block;
+    }
+  }
+}
+
+.top-header {
+  background-color: white;
+  min-height: 40px;
+  margin-bottom: 15px;
+
+  .back-button {
+    float: left;
+    margin: 5px;
+  }
+
+  .logout-button {
+    float: right;
+    margin: 5px;
+  }
 }
